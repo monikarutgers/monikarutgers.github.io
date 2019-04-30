@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-  <meta charset="UTF-8">
-  <title>Activity HTML Bio</title>
-  <link rel="stylesheet" type="text/css"href="style.css">
+  <head>
 
-  <h1>Monika Raj</h1>
-  <img src="0.jpg" alt="Monika">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <p>Achievement-oriented, dynamic, motivated Human Resource, Technology and Business professional</head>
-  <p>Clear understanding for talent requirements in business and organizations</p>
-  <p>Proven track record of delivering unique, result oriented HR and Change management solutions</p>
-  <p>Commited to staying ahead with technology</p>
-  <p>Great multitasking ability, willingness to learn, possess exceptional interpersonal, communication skills</p>
-  <p>Knowledge of Business Intelligence (BI, Tableau), Advanced Excel (Pivot, Charting, VBA), Programming (basic Python, Pandas, RESTAPIs, SQL) skills</p>
+    <title>Weather Visualization Dashboard</title>
 
-  <p><strong>Education</strong></p>
-  <p>Pursuing Data Science BootCamp, Rutgers University Feb 2019 till date</p>
-  <p> Master's degree, Economics (Masters) Mahatma Gandhi College 2012 - 2014</p>
-  <p>Post Graduate Diploma in Business Administration, Human Resource (Masters), Management Education and Research Institute (MERI) 1996 - 1998
-  </p>
-  <p> B.A. Economics Honors (Bachelors), Delhi University 1993 - 1996</p>
-  
-  <p><strong>Certifications</strong></p>
-  <p>Behavioral Testing - DISC Analysis - Thomas Profiling</p>
-  <p> CRP - Certified Reward Professional by AON Hewitt, Asia</p>
-  
-  <p><strong>Strengths and Working Knowledge/ Exposure</strong></p>
- <ul><li>MS DYNAMICS AXAPTA</li>
- <li>Talent Management</li>
- <li>HRIS</li>
- <li>MS Office</li>
- <li>Tableau</li>
- <li>Sharepoint</li>
- <li>SQL</li>
- <li>ERP</li>
- <li>VBA</li>
- <li>PeopleSoft</li>
- <li>SAP</li></ul>
- 
- 
- 
-  <ul>
-    <li><strong>Mobile: 7327889976</strong></p>
-    <li><strong>Email:</strong> <a href=>mraj75@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href=>MonikaRutgers</a></li>
-    <li><strong>LinkedIn:</strong><a href=>https://www.linkedin.com/in/monika-raj-3aba75b/</a></li>
+    <!-- Boostrap Stylesheet -->
+    
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
 
-  </ul>
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
 
+  </head>
 
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
 
-</head>
+        <!-- Toggle to get display -->
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-9 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">Latitude</a>
+            </div>
+          </div>
 
-<body>
+          <!-- Nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right navbar-right-custom">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                 <li><a href="visualization_html/temp.html">Maximum Temperature</a></li>
+                  <li><a href="visualization_html/humidity.html">Humidity</a></li>
+                  <li><a href="visualization_html/cloudiness.html">Cloudiness</a></li>
+                  <li><a href="visualization_html/wind.html">Wind Speed</a></li>
+                </ul>
+              </li>
+              <li><a href="comparison.html">Comparison</a></li>
+              <li><a href="data.html">Data</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-md-8">
+          <article class="description-content">
+            <h1 class="description-header">Summary: Latitude vs. X</h1>
+            <hr class="description-hr"/>
+            <img src="assets/images/Fig1.png" alt="" id="description-image"/>
+            
+            <p><strong>Purpose of the project - Analyze Weather changes as you get closer to the Equator</strong></p>
+            <p><strong> Source and tools Used - OpenWeatherMap API, worked throug Pandas</strong></p>
+            <p><strong>Data set - 550 different cities.</strong></p>
+            <p>The dataset was plotted using Matplotlib</p>
+            <p>We studied the following factors of weather vs.latitude:</p>
+            <ul>
+              <li>Temperature </li>
+              <li>Cloudiness</li>
+              <li>Humidity</li>
+              <li>Wind Speed</li>
+            </ul>
+            <p>This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of trends and correlations.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
 
-</body>
+          <!-- Start of Visualizations imageNav Area -->
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h2 class="imageNav-header">Visualizations</h2>
+              <hr />
+              <div id="images">
+                <a href="visualization_html/temp.html"><img src="assets/images/Fig1.png" alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
+                <a href="visualization_html/humidity.html"><img src="assets/images/Fig2.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
+                <a href="visualization_html/cloudiness.html"><img src="assets/images/Fig3.png" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
+                <a href="visualization_html/wind.html"><img src="assets/images/Fig4.png" alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
+              </div>
+            </div>
+          </section>
+        
+        </div>
+      </section>
+    </div>
+    
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
 
 </html>
